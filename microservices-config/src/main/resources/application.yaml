@@ -1,10 +1,13 @@
-security.basic.enable: false
-management.security.enabled: false
+server:
+  port: 8888
+
 spring:
   profiles:
-    active: git
+    active: native
+  application:
+    name: config-server
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/AugustoGrecoUnnoba/TP6-pdyc2025-Pellizzari-Greco.git
+        native:
+          searchLocations: classpath:/configurations
